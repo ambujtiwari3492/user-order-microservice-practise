@@ -31,6 +31,6 @@ public class Sampleontroller {
     
     public ResponseEntity<String> rateLimitFallback(RequestNotPermitted ex) {
         return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS)
-                .body("Too many requests. Please wait and try again later. ❌");
+                .body("Too many requests. Please wait and try again later.");
     }
 }

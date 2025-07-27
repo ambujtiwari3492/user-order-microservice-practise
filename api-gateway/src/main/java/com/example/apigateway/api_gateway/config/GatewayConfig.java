@@ -12,13 +12,13 @@ public class GatewayConfig {
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
 
-            // Route to user-service
+            
             .route("user-service", r -> r
-                .path("/users/**") // All requests to /user/** will be routed
-                .uri("lb://USER-SERVICE") // lb = load balanced via Eureka
+                .path("/users/**") 
+                .uri("lb://USER-SERVICE") 
             )
 
-            // Add more routes here...
+            
 
             .build();
     }
